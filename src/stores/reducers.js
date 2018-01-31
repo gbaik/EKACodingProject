@@ -1,7 +1,13 @@
 import { combineReducers } from "redux"
 
-/* import INSERT_REDUCER from "./REDUCER_FILE_NAME" */
+import addressForm from './addressForm/reducer.js';
+import basicInfoForm from './basicInfoForm/reducer.js';
+import loginForm from './loginForm/reducer.js';  
 
-export default combineReducers({
-  /* INSERT_REDUCER */
+const reducers = combineReducers({
+  addressForm,
+  basicInfoForm,
+  loginForm
 })
+
+export default reducers;
