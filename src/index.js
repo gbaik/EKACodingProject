@@ -5,10 +5,10 @@ import { Provider } from "react-redux"
 import { BrowserRouter } from 'react-router-dom';
 
 import reducers from "./stores/reducers.js"
-import middleware from "./stores/middleware.js";
+import middleware from "./stores/middleware";
 import Router from "./components/router";
 
-const store = createStore(reducers);
+const store = createStore(reducers, middleware);
 const App = () => (
   <Provider store={store}> 
     <BrowserRouter>
