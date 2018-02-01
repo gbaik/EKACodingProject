@@ -31,7 +31,7 @@ const LoginForm = ({ handleSubmit }) => {
         <Field name="LoginForm" component={ RenderField } />
         <button type='submit'>Save</button>
       </form>
-      <Link to='basicInfoForm'>Next (send to basicInfoForm)</Link>
+      <Link to='contactForm'>Next (send to contactForm)</Link>
     </div>
   )
 }
