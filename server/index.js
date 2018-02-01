@@ -18,19 +18,19 @@ app.get('*', function (req, res) {
 app.post('/loginForm/createLogin', function (req, rest) {
   console.log('Hit!');
 
-  // loginInfo.forge()
-  //   .save({ 
-  //     test: req.body
-  //   })
-  //   .then(() => {
-  //     console.log('Hit2');
-  //     LoginInfo.where({ test: req.body })
-  //       .fetchAll()
-  //       .then(test => {
-  //         console.log(test);
-  //         res.status(201).send(test);
-  //       });
-  //   })
+  loginInfo.forge()
+    .save({ 
+      test: req.body
+    })
+    .then(() => {
+      console.log('Hit2');
+      LoginInfo.where({ test: req.body })
+        .fetchAll()
+        .then(test => {
+          console.log(test);
+          res.status(201).send(test);
+        });
+    })
   // User.fetchAll().then(function(user) {
   //   console.log('Hit2')    
   //   console.log(user);
