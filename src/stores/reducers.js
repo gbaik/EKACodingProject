@@ -1,24 +1,13 @@
 import { combineReducers } from "redux"
 
-import addressForm from './addressForm/reducer.js';
-import basicInfoForm from './basicInfoForm/reducer.js';
-import loginForm from './loginForm/reducer.js';  
+import AddressForm from './AddressForm/reducer.js';
+import BasicInfoForm from './BasicInfoForm/reducer.js';
+import LoginForm from './LoginForm/reducer.js';  
 
-// const reducers = combineReducers({
-//   addressForm,
-//   basicInfoForm,
-//   loginForm
-// })
-
-const initialState = {
-  fetching: false,
-  fetched: false,
-  users: [],
-  error: null,
-};
-
-const reducers  =  (state=initialState, action) => {
-
-}
+const reducers = combineReducers({
+  AddressForm,
+  BasicInfoForm,
+  LoginForm
+})
 
 export default reducers;
