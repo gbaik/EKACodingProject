@@ -50,11 +50,7 @@ app.post('/loginForm/createLogin', function (req, rest) {
   });
 });
 
-app.post('/loginForm/createContact', function (req, rest) {
-  console.log('Contact info:', req.body);
-});
-
-app.post('/loginForm/createAddress', function (req, rest) {
+app.post('/loginForm/createProfile', function (req, rest) {
   console.log('Contact info:', req.body);
 });
 
