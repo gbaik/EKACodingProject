@@ -21,6 +21,10 @@ app.post('/loginForm/createContact', function (req, rest) {
   console.log('Contact info:', req.body);
 });
 
+app.post('/loginForm/createAddress', function (req, rest) {
+  console.log('Contact info:', req.body);
+});
+
 app.listen(port, _ => {
   console.log(`Server connected to port number: ${port}`);
 }); 
