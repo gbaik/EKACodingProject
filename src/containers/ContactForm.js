@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 
-import * as contactFormActions from '../stores/ContactForm/actions';
+import * as contactFormActions from '../stores/ProfileForm/actions';
 
 const ContactForm = ({ handleSubmit }) => {
   const RenderField = (field) => {

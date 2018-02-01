@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 
-import * as addressFormActions from '../stores/AddressForm/actions';
+import * as addressFormActions from '../stores/ProfileForm/actions';
 
 const AddressForm = ({ handleSubmit }) => {
   const RenderField = (field) => {
