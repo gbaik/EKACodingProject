@@ -20,7 +20,7 @@ const LoginForm = ({ handleSubmit }) => {
     const password = event.password;
     const email = event.email;
 
-    loginFormActions.CREATE_CONTACT(username, password, email);
+    loginFormActions.CREATE_LOGIN(username, password, email);
   }
 
   return (

@@ -1,8 +1,8 @@
-import { CREATE_CONTACT } from './actions'
+import { CREATE_LOGIN } from './actions'
 
 export default function reduce(state = {}, action) {
   switch (action.type) {
-    case CREATE_CONTACT:
+    case CREATE_LOGIN:
       return action.payload.data
     default:
       return state;

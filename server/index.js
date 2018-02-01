@@ -13,6 +13,11 @@ app.get('*', function (req, res) {
   res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
 });
 
+app.post('/loginForm/createLogin', function (req, rest) {
+  console.log('Contact info:', req.body);
+});
+
+
 app.post('/loginForm/createContact', function (req, rest) {
   console.log('Contact info:', req.body);
 });
