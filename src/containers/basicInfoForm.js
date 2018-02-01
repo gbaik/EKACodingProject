@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-const basicInfoForm = () => (
+const BasicInfoForm = () => (
   <div>
     First Name: <input type="text"></input>
     Last Name: <input type="text"></input>
@@ -11,4 +11,4 @@ const basicInfoForm = () => (
   </div>
 )
 
-export default basicInfoForm;
+export default BasicInfoForm;

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-const addressForm = () => (
+const AddressForm = () => (
   <div>
     Address: <input type="text"></input>
     City: <input type="text"></input>
@@ -12,4 +12,4 @@ const addressForm = () => (
   </div>
 )
 
-export default addressForm;
+export default AddressForm;

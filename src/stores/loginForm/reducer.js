@@ -1,7 +1,14 @@
+import { test } from './actions.js'
+
 const initialState = {
-  test: false
+  testState: false
 };
 
 export default function reduce(state = initialState, action = {}) {
-  return state
+  switch (action.type) {
+    case test:
+      return console.log('Hello World!');
+    default:
+      return state;
+  }
 }
