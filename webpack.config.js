@@ -10,6 +10,7 @@ module.exports = {
     filename: '[name].js',
     path: DIST_DIR
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
