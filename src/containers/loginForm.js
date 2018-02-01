@@ -11,8 +11,7 @@ const LoginForm = ({ handleSubmit }) => {
     const { meta: { touched, error, warning }} = field; 
 
     return (
-      <input placeholder='enter new group name'
-      type="text" {...field.input} />
+      <input type="text" {...field.input} />
     )
   };
 
@@ -23,12 +22,11 @@ const LoginForm = ({ handleSubmit }) => {
   }
 
   return (
-    <div>
-      Username: <input type="text"></input>
-      Password: <input type="text"></input>
-      E-mail Address: <input type="text"></input>
+      <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Field name="LoginForm" component={ RenderField } />
+        Username: <Field name="username" component={ RenderField } />
+        Password: <Field name="password" component={ RenderField } />
+        E-mail Address: <Field name="email" component={ RenderField } />        
         <button type='submit'>Save</button>
       </form>
       <Link to='contactForm'>Next (send to contactForm)</Link>
