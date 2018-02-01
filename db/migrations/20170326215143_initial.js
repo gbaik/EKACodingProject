@@ -20,15 +20,5 @@ exports.down = function (knex, Promise) {
   return Promise.all([
     knex.raw('DROP TABLE if exists loginInfo CASCADE'),
     knex.raw('DROP TABLE if exists profileInfo CASCADE'),
-    knex.raw('DROP TABLE if exists auths CASCADE'),
-    knex.raw('DROP TABLE if exists profiles CASCADE'),
-    knex.raw('DROP TABLE if exists groups CASCADE'),
-    knex.raw('DROP TABLE if exists profiles_groups CASCADE'),
-    knex.raw('DROP TABLE if exists channels CASCADE'),
-    knex.raw('DROP TABLE if exists messages CASCADE'),
-    knex.raw('DROP TABLE if exists profiles_friends CASCADE'),
-    knex.raw('DROP TABLE if exists pending_friend_requests CASCADE'),
-    knex.raw('DROP TABLE if exists events CASCADE'),
-    knex.raw('DROP TABLE if exists attendees CASCADE')
   ]);
 };
