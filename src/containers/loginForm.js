@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 
-import * as testActions from '../stores/LoginForm/actions';
+import * as loginFormActions from '../stores/LoginForm/actions';
 
 const LoginForm = ({ handleSubmit }) => {
   const RenderField = (field) => {
@@ -15,14 +15,16 @@ const LoginForm = ({ handleSubmit }) => {
     )
   };
 
-  const onSubmit = (e) => {
-    console.log(e);
-    console.log(e.LoginForm);
-    testActions.TEST();
+  const onSubmit = (event) => {
+    const username = event.username;
+    const password = event.password;
+    const email = event.email;
+
+    loginFormActions.CREATE_CONTACT(username, password, email);
   }
 
   return (
-      <div>
+    <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         Username: <Field name="username" component={ RenderField } />
         Password: <Field name="password" component={ RenderField } />
