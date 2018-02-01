@@ -4,7 +4,7 @@ exports.up = function (knex, Promise) {
       table.increments('id').unsigned().primary();
       table.string('firstName', 100).nullable();
       table.string('lastName', 100).nullable();
-      table.string('phone', 100).nullable();
+      table.stripng('phone', 100).nullable();
       table.string('address', 100).nullable();
     }),
     knex.schema.createTableIfNotExists('loginInfo', (table) => {

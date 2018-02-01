@@ -1,7 +1,7 @@
 const db = require('../');
 
 const loginInfo = db.Model.extend({
-  tableName: 'logininfo'
+  tableName: 'loginInfo'
 });
 
 module.exports = db.model('loginInfo', loginInfo);

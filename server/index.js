@@ -16,38 +16,14 @@ app.get('*', function (req, res) {
 });
 
 app.post('/loginForm/createLogin', function (req, rest) {
-  console.log('Hit!');
+  const { username, password, email } = req.body;
 
-  loginInfo.forge()
+  models.loginInfo.forge()
     .save({ 
-      test: req.body
+      username: username,
+      password: password,
+      email: email
     })
-    .then(() => {
-      console.log('Hit2');
-      LoginInfo.where({ test: req.body })
-        .fetchAll()
-        .then(test => {
-          console.log(test);
-          res.status(201).send(test);
-        });
-    })
-  // User.fetchAll().then(function(user) {
-  //   console.log('Hit2')    
-  //   console.log(user);
-  // }).catch(function(err) {
-  //   console.error(err);
-  // });
-
-  models.loginInfo.fetchAll().then(test => {
-    console.log('tes',test)
-  })
-  .catch(err => {
-    console.log(err);
-    // if (err.constraint === 'groups_name_unique') {
-    //   return res.status(403);
-    // }
-    // res.status(404).send(err);
-  });
 });
 
 app.post('/loginForm/createProfile', function (req, rest) {
