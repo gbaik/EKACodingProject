@@ -36,12 +36,6 @@ const LoginForm = ({ handleSubmit }) => {
   )
 }
 
-const mapStateToProps = function(state) {
-  return { 
-    testState: state.testState
-  };
-};
-
 export default reduxForm({
   form: 'LoginForm'
-})(connect(mapStateToProps)(LoginForm));
+})(LoginForm);

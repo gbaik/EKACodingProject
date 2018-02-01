@@ -17,7 +17,6 @@ app.post('/loginForm/createLogin', function (req, rest) {
   console.log('Contact info:', req.body);
 });
 
-
 app.post('/loginForm/createContact', function (req, rest) {
   console.log('Contact info:', req.body);
 });

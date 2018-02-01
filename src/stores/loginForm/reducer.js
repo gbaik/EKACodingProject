@@ -1,4 +1,4 @@
-import { CREATE_LOGIN } from './actions'
+import { CREATE_LOGIN } from './actions';
 
 export default function reduce(state = {}, action) {
   switch (action.type) {
