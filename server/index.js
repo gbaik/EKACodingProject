@@ -16,18 +16,44 @@ app.get('*', function (req, res) {
 });
 
 app.post('/loginForm/createLogin', function (req, rest) {
-  const { username, password, email } = req.body;
+  const { 
+    username, 
+    password, 
+    email 
+  } = req.body;
 
-  models.loginInfo.forge()
-    .save({ 
-      username: username,
-      password: password,
-      email: email
-    })
+  models.loginInfo
+    .forge()
+      .save({ 
+        username: username,
+        password: password,
+        email: email
+      })
 });
 
 app.post('/loginForm/createProfile', function (req, rest) {
-  console.log('Contact info:', req.body);
+  const {
+    address,
+    city,
+    state,
+    zipcode,
+    firstName,
+    lastName,
+    telephone
+  } = req.body;
+   const fullAddress = address + city + state + zipcode;
+
+  models.profileInfo
+  .forge()
+    .save({ 
+      firstName: firstName,
+      lastName: lastName,
+      phone: telephone,
+      address: fullAddress
+    })
+      .then(() => {
+        return 
+      })
 });
 
 app.listen(port, _ => {

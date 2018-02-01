@@ -1,5 +1,11 @@
 # EKA TECHNICAL CHALLENGE - 2
 
+## INSTRUCTIONS
+1. Download dependencies
+`npm install;`
+2. Run scripts
+`npm run server;
+ npm run build;`
 
 ## INTRODUCTION
 For this technical challenge, we would like you to provide an interface for a user to input information. This workflow is commonly referred to as an onboarding process, and involves the user inputting their information into a series of forms.
