@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const landingPage = () => (
   <div >
-    Hello World
+    Hello World!
   </div>
 )
 

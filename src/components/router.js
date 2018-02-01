@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import landingPage from './landingPage.js';
+import LandingPage from './landingPage';
 
 const Router = () => (
   <div>
     <Switch>
       <Route exact path="/">
-        <landingPage />
+        <LandingPage />
       </Route>          
     </Switch>
   </div>

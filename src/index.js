@@ -2,16 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux"
 import { Provider } from "react-redux"
+import { BrowserRouter } from 'react-router-dom';
 
 import reducers from "./stores/reducers.js"
 import middleware from "./stores/middleware.js";
+import Router from "./components/router";
 
-import Router from "./components/router.js";
-
-const store = createStore(reducers, middleware);
-const App = (
+const store = createStore(reducers);
+const App = () => (
   <Provider store={store}> 
-    <Router /> 
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>  
   </Provider>
 )
 
