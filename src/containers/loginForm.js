@@ -6,19 +6,32 @@ import { Field, reduxForm } from 'redux-form';
 
 import * as testActions from '../stores/LoginForm/actions';
 
-const LoginForm = () => {
-  const RenderField = () => (<input type="text"></input>);
+const LoginForm = ({ handleSubmit }) => {
+  const RenderField = (field) => {
+    const { meta: { touched, error, warning }} = field; 
+
+    return (
+      <input placeholder='enter new group name'
+      type="text" {...field.input} />
+    )
+  };
+
+  const onSubmit = (e) => {
+    console.log(e);
+    console.log(e.LoginForm);
+    testActions.TEST();
+  }
 
   return (
     <div>
       Username: <input type="text"></input>
       Password: <input type="text"></input>
-      E-mail Address: <input type="text" onChange={testActions.test()}></input>
-      <form onSubmit={() => console.log('hello')}>
-        <Field name="channelName" component={ RenderField } />
-        <button type='submit'>Create Channel</button>
+      E-mail Address: <input type="text"></input>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Field name="LoginForm" component={ RenderField } />
+        <button type='submit'>Save</button>
       </form>
-      <Link to='basicInfoForm'>SAVE (send to basicInfoForm)</Link>
+      <Link to='basicInfoForm'>Next (send to basicInfoForm)</Link>
     </div>
   )
 }

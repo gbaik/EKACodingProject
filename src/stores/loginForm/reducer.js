@@ -1,13 +1,10 @@
-import { test } from './actions.js'
+import { TEST } from './actions'
 
-const initialState = {
-  testState: false
-};
-
-export default function reduce(state = initialState, action = {}) {
+export default function reduce(state = {}, action) {
   switch (action.type) {
-    case test:
-      return console.log('Hello World!');
+    case TEST:
+      console.log('Hello World!');
+      return action.payload.data
     default:
       return state;
   }

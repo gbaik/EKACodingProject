@@ -1,3 +1,6 @@
-export function test() { 
-  return console.log('Bye');
+export const TEST = function () { 
+  return {
+    type: TEST,
+    payload: {}
+  };
 }
