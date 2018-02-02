@@ -1,4 +1,4 @@
-import { CREATE_LOGIN, UPDATE_CURRENT_EMAIL } from './actions';
+import { CREATE_LOGIN } from './actions';
 
 const initialState = {
   email: ''
@@ -7,11 +7,9 @@ const initialState = {
 export default function reduce(state = initialState, action) {
   switch (action.type) {
     case CREATE_LOGIN:
-      return;
-    case UPDATE_CURRENT_EMAIL:
-    return {
-      email: action.payload 
-    }
+      return {
+        email: action.payload 
+      }
     default:
       return state;
   }

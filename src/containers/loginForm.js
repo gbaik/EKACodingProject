@@ -19,8 +19,7 @@ const LoginForm = ({ handleSubmit, dispatch }) => {
     const password = event.password;
     const email = event.email;
 
-    loginFormActions.UPDATE_CURRENT_EMAIL(email, dispatch);
-    loginFormActions.CREATE_LOGIN(username, password, email);
+    loginFormActions.CREATE_LOGIN(username, password, email, dispatch);
   }
 
   return (
