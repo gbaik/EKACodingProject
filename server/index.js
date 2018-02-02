@@ -15,23 +15,25 @@ app.get('*', function (req, res) {
   res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
 });
 
-app.post('/loginForm/createLogin', function (req, rest) {
+app.post('/loginForm/createLogin', function (req, res) {
   const { 
     username, 
     password, 
     email 
   } = req.body;
 
-  models.loginInfo
-    .forge()
-      .save({ 
-        username: username,
-        password: password,
-        email: email
-      })
+  // models.loginInfo
+  //   .forge()
+  //     .save({ 
+  //       username: username,
+  //       password: password,
+  //       email: email
+  //     })
+  
+  res.end();
 });
 
-app.post('/loginForm/createProfile', function (req, rest) {
+app.post('/loginForm/createProfile', function (req, res) {
   const {
     address,
     city,
@@ -52,7 +54,7 @@ app.post('/loginForm/createProfile', function (req, rest) {
       address: fullAddress
     })
       .then(() => {
-        return 
+        res.end(); 
       })
 });
 

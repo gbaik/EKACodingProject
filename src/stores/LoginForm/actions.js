@@ -11,3 +11,14 @@ export const CREATE_LOGIN = function (username, password, email) {
     payload: {}
   };
 }
+
+export const UPDATE_CURRENT_EMAIL = function (email, dispatch) {
+  try {
+    dispatch({
+      type: UPDATE_CURRENT_EMAIL,
+      payload: email
+    });
+  } catch (error) {
+    return console.error(error);
+  }
+}

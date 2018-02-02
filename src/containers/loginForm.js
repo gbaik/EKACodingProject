@@ -5,7 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 
 import * as loginFormActions from '../stores/LoginForm/actions';
 
-const LoginForm = ({ handleSubmit }) => {
+const LoginForm = ({ handleSubmit, dispatch }) => {
   const RenderField = (field) => {
     const { meta: { touched, error, warning }} = field; 
 
@@ -19,6 +19,7 @@ const LoginForm = ({ handleSubmit }) => {
     const password = event.password;
     const email = event.email;
 
+    loginFormActions.UPDATE_CURRENT_EMAIL(email, dispatch);
     loginFormActions.CREATE_LOGIN(username, password, email);
   }
 
