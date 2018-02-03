@@ -7,9 +7,9 @@ const initialState = {
 export default function reduce(state = initialState, action) {
   switch (action.type) {
     case CREATE_LOGIN:
-      return {
-        email: action.payload 
-      }
+      return Object.assign({}, state, {
+        email: action.payload
+      });
     default:
       return state;
   }
